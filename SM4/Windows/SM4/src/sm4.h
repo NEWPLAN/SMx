@@ -1,6 +1,9 @@
-/**
- * \file sm4.h
- */
+/*************************************************************************
+       > File Name: SM4.h
+       > Author:NEWPLAN
+       > E-mail:newplan001@163.com
+       > Created Time: Thu Apr 13 23:55:50 2017
+************************************************************************/
 #ifndef XYSSL_SM4_H
 #define XYSSL_SM4_H
 
@@ -12,8 +15,8 @@
  */
 typedef struct
 {
-    int mode;                   /*!<  encrypt/decrypt   */
-    unsigned long sk[32];       /*!<  SM4 subkeys       */
+	int mode;                   /*!<  encrypt/decrypt   */
+	unsigned long sk[32];       /*!<  SM4 subkeys       */
 }
 sm4_context;
 
@@ -47,10 +50,10 @@ void sm4_setkey_dec( sm4_context *ctx, unsigned char key[16] );
  * \param output   output block
  */
 void sm4_crypt_ecb( sm4_context *ctx,
-				     int mode,
-					 int length,
-                     unsigned char *input,
-                     unsigned char *output);
+                    int mode,
+                    int length,
+                    unsigned char *input,
+                    unsigned char *output);
 
 /**
  * \brief          SM4-CBC buffer encryption/decryption
@@ -62,11 +65,11 @@ void sm4_crypt_ecb( sm4_context *ctx,
  * \param output   buffer holding the output data
  */
 void sm4_crypt_cbc( sm4_context *ctx,
-                     int mode,
-                     int length,
-                     unsigned char iv[16],
-                     unsigned char *input,
-                     unsigned char *output );
+                    int mode,
+                    int length,
+                    unsigned char iv[16],
+                    unsigned char *input,
+                    unsigned char *output );
 
 #ifdef __cplusplus
 }

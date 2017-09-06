@@ -1,11 +1,10 @@
-/**
- * \file sm3.h
- * thanks to Xyssl
- * SM3 standards:http://www.oscca.gov.cn/News/201012/News_1199.htm
- * author:goldboar
- * email:goldboar@163.com
- * 2011-10-26
- */
+/*************************************************************************
+      > File Name: sm3.h
+      > Author:NEWPLAN
+      > E-mail:newplan001@163.com
+      > Created Time: Thu Apr 13 23:55:50 2017
+************************************************************************/
+
 #ifndef XYSSL_SM3_H
 #define XYSSL_SM3_H
 
@@ -15,12 +14,12 @@
  */
 typedef struct
 {
-    unsigned long total[2];     /*!< number of bytes processed  */
-    unsigned long state[8];     /*!< intermediate digest state  */
-    unsigned char buffer[64];   /*!< data block being processed */
+	unsigned long total[2];     /*!< number of bytes processed  */
+	unsigned long state[8];     /*!< intermediate digest state  */
+	unsigned char buffer[64];   /*!< data block being processed */
 
-    unsigned char ipad[64];     /*!< HMAC: inner padding        */
-    unsigned char opad[64];     /*!< HMAC: outer padding        */
+	unsigned char ipad[64];     /*!< HMAC: inner padding        */
+	unsigned char opad[64];     /*!< HMAC: outer padding        */
 
 }
 sm3_context;
@@ -60,7 +59,7 @@ void sm3_finish( sm3_context *ctx, unsigned char output[32] );
  * \param output   SM3 checksum result
  */
 void sm3( unsigned char *input, int ilen,
-           unsigned char output[32]);
+          unsigned char output[32]);
 
 /**
  * \brief          Output = SM3( file contents )
@@ -109,8 +108,8 @@ void sm3_hmac_finish( sm3_context *ctx, unsigned char output[32] );
  * \param output   HMAC-SM3 result
  */
 void sm3_hmac( unsigned char *key, int keylen,
-                unsigned char *input, int ilen,
-                unsigned char output[32] );
+               unsigned char *input, int ilen,
+               unsigned char output[32] );
 
 
 #ifdef __cplusplus
