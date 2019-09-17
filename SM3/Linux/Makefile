@@ -1,4 +1,4 @@
-Target: sm3.exe
+Target:= sm3.exe
 CC=gcc
 CFALAGS=
 objs=sm3.o sm3test.o
@@ -11,10 +11,10 @@ all:$(Target)
 	@echo " make done!"
 
 $(Target):$(objs)
-	$(CC) $< -o $^
+	$(CC) $^ -o $@
 
 %.o:%.c $(head)
-	$(CC) -C $< -o $^
+	$(CC) -c $< -o $@
 
 
 clean:
