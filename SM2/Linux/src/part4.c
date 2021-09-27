@@ -189,7 +189,7 @@ void test_part4(char **sm2_param, int type, int point_bit_length)
 	sm2_encrypt(ecp, &message_data);
 	sm2_decrypt(ecp, &message_data);
 
-	printf("decrypt: len: %d\n%s\n", strlen(message_data.decrypt), message_data.decrypt);
+	printf("decrypt: len: %lu\n%s\n", strlen((const char*)message_data.decrypt), message_data.decrypt);
 	OPENSSL_free(message_data.decrypt);
 
 	sm2_ec_key_free(key_B);

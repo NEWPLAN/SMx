@@ -1,6 +1,6 @@
 Target:= sm3.exe
 CC=gcc
-CFALAGS=
+CFALAGS= -Wall -Wextra
 objs=sm3.o sm3test.o
 
 cins=sm3.c sm3test.c
@@ -8,7 +8,7 @@ cins=sm3.c sm3test.c
 head=sm3.h
 
 all:$(Target)
-	@echo " make done!"
+	@echo "make done!"
 
 $(Target):$(objs)
 	$(CC) $^ -o $@

@@ -146,7 +146,7 @@ char *sm2_param_dh_r_B[2] =
 	"1F219333" "87BEF781" "D0A8F7FD" "708C5AE0" "A56EE3F4" "23DBC2FE" "5BDF6F06" "8C53F7AD",
 };
 
-char *message = "encryption standard NEWPLAN£¡£¡";
+char *message = "encryption standard NEWPLAN!!";
 char *message_digest = "message digest";
 
 char *ID_A = "ALICE123@YAHOO.COM";

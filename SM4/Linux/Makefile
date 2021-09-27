@@ -1,6 +1,6 @@
-Target: sm4.exe
+Target:= sm4.exe
 CC=gcc
-CFALAGS=
+CFALAGS= -Wall -Wextra
 objs=sm4.o sm4test.o
 
 cins=sm4.c sm4test.c
@@ -8,13 +8,13 @@ cins=sm4.c sm4test.c
 head=sm4.h
 
 all:$(Target)
-	@echo " make done!"
+	@echo "make done!"
 
 $(Target):$(objs)
-	$(CC) $< -o $^
+	$(CC) $^ -o $@
 
-%.o:%.c $(head)
-	$(CC) -C $< -o $^
+%.o: %.c $(head)
+	$(CC) -c ${CFALAGS} $< -o $@
 
 
 clean:
