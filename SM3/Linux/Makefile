@@ -11,10 +11,10 @@ all:$(Target)
 	@echo "make done!"
 
 $(Target):$(objs)
-	$(CC) $^ -o $@
+	$(CC) $^ -mx32  -o $@
 
 %.o:%.c $(head)
-	$(CC) -c $< -o $@
+	$(CC) -c $< -mx32 -o $@
 
 
 clean:

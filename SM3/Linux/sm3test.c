@@ -10,9 +10,9 @@
 
 int main( int argc, char *argv[] )
 {
-	unsigned char *input = "abc";
+	uint8_t *input = "abc";
 	int ilen = 3;
-	unsigned char output[32];
+	uint8_t output[32];
 	int i;
 	sm3_context ctx;
 
